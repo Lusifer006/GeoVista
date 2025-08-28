@@ -1,0 +1,138 @@
+/* ===== Materials Page ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  margin-bottom: 120px; /* space for buttons + nav */
+}
+
+h1, h2, h5 {
+  color: #212529;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+/* Step Badges */
+.badge {
+  font-size: 0.9rem;
+  cursor: default;
+}
+.badge.bg-primary {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+.badge.bg-secondary {
+  background-color: #e9ecef !important;
+  color: #495057 !important;
+}
+
+/* Materials Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+}
+/* Material cards now support images */
+.material-card {
+  background-color: #e9ecef;
+  border-radius: 8px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  text-align: center;
+  padding: 6px;
+}
+
+.material-card img {
+  max-width: 80%;
+  max-height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.material-card:hover {
+  background-color: #dee2e6;
+  transform: translateY(-3px);
+}
+
+.material-label {
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.material-card.selected {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 500;
+}
+.material-card.selected .material-label {
+  color: white; /* force label text to white */
+}
+/* Fixed Bottom Buttons */
+.bottom-buttons {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+  z-index: 1030;
+}
+
+.bottom-buttons .btn {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* Save Draft */
+.btn-outline-secondary {
+  border: 2px solid #adb5bd;
+  color: #495057;
+}
+.btn-outline-secondary:hover {
+  background-color: #f1f3f5;
+  border-color: #868e96;
+}
+
+/* Continue */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+  z-index: 1020;
+}
+.bottom-nav a {
+  color: #6c757d;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.bottom-nav a:hover {
+  color: #0d6efd;
+}
+.bottom-nav i {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
+}
