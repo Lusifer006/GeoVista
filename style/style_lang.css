@@ -1,0 +1,40 @@
+/* General Page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+/* Grid for buttons */
+.Buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 4 equal columns */
+  grid-template-rows: repeat(auto, auto);    /* 2 rows */
+  gap: 20px;                              /* space between buttons */
+  width: 90%;                             /* control total width */
+  max-width: 800px;                       /* prevent stretching too wide */
+}
+
+/* Style for each button */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #add8e6;
+  color: #111;
+  padding: 14px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #90cde3;
+}
