@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoVista - Home</title>
+  <link rel="stylesheet" href="../style/style_home.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1><a href="home.html">GeoVista</a></h1>
+  </header>
+
+  <!-- Page Content -->
+  <main>
+    <h2>Add Your Land</h2>
+    <p class="subtitle">Let's start by adding details about your land</p>
+
+    <div class="cards">
+      <!-- Upload Image Card (modified to trigger file input instead of linking) -->
+      <div class="card" id="uploadCard" style="cursor:pointer;">
+        <div class="btn">
+          <div class="icon"><i class="bi bi-camera"></i></div>
+          <h3>Take Photo/Upload Image</h3>
+          <p>Upload photos of your land from gallery or take new ones</p>
+        </div>
+      </div>
+
+      <!-- GPS/Drone Scan card -->
+      <div class="card">
+        <a href="gps.html" class="btn">
+          <div class="icon"><i class="bi bi-map"></i></div>
+          <h3>GPS/Drone Scan</h3>
+          <p>Scan your plot using GPS coordinates or connect a drone</p>
+        </a>
+      </div>
+
+      <!-- Manual Entry card -->
+      <div class="card">
+        <a href="manual.html" class="btn">
+          <div class="icon"><i class="bi bi-pencil"></i></div>
+          <h3>Manual Entry</h3>
+          <p>Manually enter your land dimensions and details</p>
+        </a>
+      </div>
+    </div>  
+      <div id="uploadStatus" style="text-align:center; margin-top:20px;">
+    <p id="fileName" style="color: green; font-size:14px;"></p>
+    <button id="continueBtn" disabled class="continue-btn">Continue</button>
+  </div>
+</main>
+
+  <!-- Hidden file input (for Upload Image card) -->
+  <input type="file" id="plotUpload" accept="image/*" hidden>
+
+  <!-- JS -->
+  <script src="../js/home.js"></script>
+
+</body>
+</html>
